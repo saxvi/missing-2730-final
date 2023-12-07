@@ -14,7 +14,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private int numFound;
 
     private IInteractable interactable;
-
+    
     private void Update()
     {
         numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position,

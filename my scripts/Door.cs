@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Door : MonoBehaviour, IInteractable
 {
-    // 
+    [SerializeField] bool open = false;
     [SerializeField] private string prompt;
-
-    // fancy open door
-    [SerializeField] private float openSpeed;
-    private float rotationAmt = 90f;
-    private float forwardDirection = 0;
-    private Vector3 startRotation;
-    private Vector3 Forward;
-    private Coroutine animationCoroutine;
 
     public string InteractionPrompt => prompt;
     public bool Interact(Interactor interactor)
     {
-        // do stuff
-        Debug.Log("Opening door");
+        if (!open) {
+            prompt = "close";
+            transform.Rotate(0, -90, 0);
+            transform.position = new Vector3 ((float) -19, (float)2.9, (float) 6.2);
+            open = true;
+        } else {
+            prompt = "open";
+            transform.Rotate(0, 90, 0);
+            transform.position = new Vector3 ((float) -17.8, (float) 3.1, (float) 5.2);
+            open = false;
+        }
         return true;
     }
+    
 }

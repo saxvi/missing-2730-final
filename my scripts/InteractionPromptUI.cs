@@ -12,16 +12,17 @@ public class InteractionPromptUI : MonoBehaviour
         mainCam = Camera.main;
         uiPanel.SetActive(false);
     }
-    private void LateUpdate() {
-        var rotation = mainCam.transform.rotation;
-        transform.LookAt(transform.position + rotation * Vector3.forward,
-            rotation * Vector3.up);
-    }
+    // ui rotation
+    // private void LateUpdate() {
+    //     var rotation = mainCam.transform.rotation;
+    //     transform.LookAt(transform.position + rotation * Vector3.forward,
+    //         rotation * Vector3.up);
+    // }
 
     public bool isDisplayed = false;
 
     public void SetUp(string thisText) {
-        promptText = promptText;
+        promptText.text = thisText;
         uiPanel.SetActive(true);
         isDisplayed = true; 
     }
