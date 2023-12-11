@@ -7,6 +7,8 @@ public class Interactor : MonoBehaviour
 {
     [SerializeField] private Transform interactionPoint;
     [SerializeField] private float interactionPointRadius = 0.5f;
+    [SerializeField] private int ipHeight = 1;
+    private Vector3 ipEnd;
     [SerializeField] private LayerMask interactableMask;
     [SerializeField] private InteractionPromptUI interactionPromptUI;
 
@@ -17,7 +19,9 @@ public class Interactor : MonoBehaviour
     
     private void Update()
     {
-        numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position,
+        ipEnd = transform.position + new Vector3 (0, ipHeight, 0);
+
+        numFound = Physics.OverlapCapsuleNonAlloc(interactionPoint.position, ipEnd,
             interactionPointRadius, _colliders, interactableMask);
 
          // if there is an interactable object in range

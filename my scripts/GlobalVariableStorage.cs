@@ -5,12 +5,12 @@ using UnityEngine;
 public class GlobalVariableStorage : MonoBehaviour
 {
     // door interacted with yes/no
-    public bool doorAction;
+    public int itemsCollected;
 
     // Start is called before the first frame update
     void Start()
     {
-        doorAction = false;
+        itemsCollected = 0;
     }
 
     // Update is called once per frame
