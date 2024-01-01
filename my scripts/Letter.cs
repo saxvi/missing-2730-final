@@ -6,10 +6,10 @@ using UnityEngine.UIElements;
 public class Letter : MonoBehaviour, IInteractable
 {    
     private Camera mainCam;
+    [SerializeField] private AudioSource letterUp;
+    [SerializeField] private AudioSource letterDown;
     [SerializeField] private GameObject letterDetail;
     [SerializeField] private GameObject letterDescription;
-
-    public static bool letterFound = false;
     [SerializeField] private string prompt;
 
     public string InteractionPrompt => prompt;
@@ -21,7 +21,7 @@ public class Letter : MonoBehaviour, IInteractable
     }
 
     public bool isDisplayed = false;
-
+    
     public bool Interact(Interactor interactor)
     {
         if (!isDisplayed) {
@@ -29,16 +29,17 @@ public class Letter : MonoBehaviour, IInteractable
             Debug.Log("Inspecting letter");
             letterDetail.SetActive(true);
             letterDescription.SetActive(true);
+            letterUp.Play();
             isDisplayed = true;
-            letterFound = true;
         } else {
             prompt = "pick up";
             Debug.Log("Putting letter down");
             letterDetail.SetActive(false);
             letterDescription.SetActive(false);
+            letterDown.Play();
             isDisplayed = false;
         }
+        Found.letter = true;
         return true;
-    }
-    
+    }    
 }

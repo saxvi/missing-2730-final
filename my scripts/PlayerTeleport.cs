@@ -6,17 +6,14 @@ public class PlayerTeleport : MonoBehaviour, IInteractable
 {
 
     [SerializeField] private GameObject player;
+    CharacterController playerController;
+
     [SerializeField] private GameObject noLeave;
     [SerializeField] public AudioSource openSound;
     [SerializeField] public AudioSource closeSound;
     [SerializeField] private string prompt;
     [SerializeField] public int itemsCollected;
-    [SerializeField] public Letter letter;
-    [SerializeField] public Notebook notebook;
-    [SerializeField] public Phone phone;
-    [SerializeField] public bool yes = false;
-
-    CharacterController playerController;
+    public bool yes = false;
 
     public string InteractionPrompt => prompt;
 
@@ -24,7 +21,10 @@ public class PlayerTeleport : MonoBehaviour, IInteractable
         playerController = player.GetComponent<CharacterController>();
         noLeave.SetActive(false);
     }
-    //yes = phone.phoneFound && letter.letterFound && notebook.notebookFound;
+    private void Update() {
+        yes = Found.book && Found.letter && Found.phone;
+    }
+
     public bool Interact(Interactor interactor)
     {
         if (yes) {
@@ -44,7 +44,7 @@ public class PlayerTeleport : MonoBehaviour, IInteractable
         playerController.enabled = false;
         yield return new WaitForSeconds(0.5f);
         closeSound.Play();
-        player.transform.position = new Vector3(-0.61f, 2.02f, 25.14f);
+        player.transform.position = new Vector3(-0.61f,2.19f,25.14f);
         yield return new WaitForSeconds(0.1f);
         playerController.enabled = true;
     } 

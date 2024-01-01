@@ -39,6 +39,7 @@ CharacterController characterController;
 void Update() {
 
     if (Keyboard.current.eKey.wasPressedThisFrame) {
+        StartCoroutine("Wait");
         enabled = true;
     }
 
@@ -110,5 +111,9 @@ void Update() {
         }
 
         #endregion
+    }
+
+    IEnumerator Wait() {
+        yield return new WaitForSeconds(3f);
     }
 }
