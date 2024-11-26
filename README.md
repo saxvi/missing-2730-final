@@ -17,9 +17,17 @@ Ideally, we want the experience to start out unassuming and then become more sin
 We will use WASD & point-and-click exploration with visual novel elements. The player  character can move within a single scene using WASD and mouse, but must click on transition points (doors, other scenes, etc.) to move between them.
 
 ## Narrative:
-We want to instill feelings of unease and have the player leave our interactive experience with more questions than answers. Through use of game objects (notebook on desk, sticky note on fridge, receipts, etc.) we will relay instructions and bits of information about the story. The closest game object to the player upon start (notebook) will list game background and then instructions. This notebook will also potentially have a colorful outline around it just to make sure the player sees it, but other interactables throughout the experience will not have this same outline. The main goal of the player is simply to play through the entire experience by finding all the clues.
+We want to instill feelings of unease and have the player leave our interactive experience with more questions than answers. Through use of game objects (notebook on desk, sticky note on fridge, receipts, etc.) we will relay instructions and bits of information about the story.
 
-**Plot:** The player is a friend or family member to Person B (name pending), who has effectively gone missing - they have not shown up to work, answered calls or texts, or been seen by the neighbors in a while. The player is trying to find out what happened to Person B by going through their apartment and looking for clues. They don’t know much, except the neighbors report that Person B had been acting a little strange lately. The clues in the apartment point to Person B having some sort of psychological breakdown, and the player becomes increasingly concerned and desperate to find their friend. Eventually the player will follow clues to a second location where Person B ended up. While there, the player will stumble upon some paranormal stuff with an implied cyclical ending.
+The closest game object to the player upon start (notebook) will list game background and then instructions. This notebook will also potentially have a colorful outline around it just to make sure the player sees it, but other interactables throughout the experience will not have this same outline. 
+
+The main goal of the player is simply to play through the entire experience by finding all the clues.
+
+**Plot:** The player is a friend or family member to Person B (name pending), who has effectively gone missing - they have not shown up to work, answered calls or texts, or been seen by the neighbors in a while. 
+
+The player is trying to find out what happened to Person B by going through their apartment and looking for clues. They don’t know much, except the neighbors report that Person B had been acting a little strange lately. 
+
+The clues in the apartment point to Person B having some sort of psychological breakdown, and the player becomes increasingly concerned and desperate to find their friend. Eventually the player will follow clues to a second location where Person B ended up. While there, the player will stumble upon some paranormal stuff with an implied cyclical ending.
 
 ## Interactive Elements:
 * First person point-of-view
@@ -30,7 +38,9 @@ We want to instill feelings of unease and have the player leave our interactive 
 * Various objects will be interactable
 The player character will pick up the object to get a closer look, bringing up a dialogue box with information associated with the object (similar to the more recent Resident Evil games).
 
-## What We Have:
+## Next Steps: 
+
+### What We Have:
 We have both of our Blender comics successfully imported into Unity.
 * Includes all sub-assets that were used to create the original comic scenes.
 We have the first-person POV plugins installed in Unity.
