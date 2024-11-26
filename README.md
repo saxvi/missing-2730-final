@@ -8,7 +8,7 @@ For our final project, we aim to create an interactive experience where the play
 * Horror movies (genre)
 Ideally, we want the experience to start out unassuming and then become more sinister as the player progresses, similarly to how many horror movies relay their narrative.
 
-***Example games:**
+**Example games:**
 * The Long Dark (interaction-wise)
 * Suite 776 (vibe-wise; mysterious apartment similar to what we are going for)
 * Gone Home (kind of a mixture of the vibe of 776 and the interaction of TLD)
@@ -23,7 +23,11 @@ The closest game object to the player upon start (notebook) will list game backg
 
 The main goal of the player is simply to play through the entire experience by finding all the clues.
 
-**Plot:** The player is a friend or family member to Person B (name pending), who has effectively gone missing - they have not shown up to work, answered calls or texts, or been seen by the neighbors in a while. 
+
+
+**Plot:**
+
+The player is a friend or family member to Person B (name pending), who has effectively gone missing - they have not shown up to work, answered calls or texts, or been seen by the neighbors in a while. 
 
 The player is trying to find out what happened to Person B by going through their apartment and looking for clues. They don’t know much, except the neighbors report that Person B had been acting a little strange lately. 
 
