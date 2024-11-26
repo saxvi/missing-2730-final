@@ -69,4 +69,5 @@ We have access to audio software (Audacity).
 * Packages
 * UserSettings
 * ProjectSettings
-(The rest will be generated upon startup)
+
+  (The rest will be generated upon startup)
