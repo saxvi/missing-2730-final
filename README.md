@@ -21,7 +21,7 @@ We want to instill feelings of unease and have the player leave our interactive 
 
 The closest game object to the player upon start (notebook) will list game background and then instructions. This notebook will also potentially have a colorful outline around it just to make sure the player sees it, but other interactables throughout the experience will not have this same outline. 
 
-The main goal of the player is simply to play through the entire experience by finding all the clues.
+* The main goal of the player is simply to play through the entire experience by finding all the clues.
 
 
 
@@ -50,8 +50,8 @@ We have both of our Blender comics successfully imported into Unity.
 We have the first-person POV plugins installed in Unity.
 We have playlists of potential music (Haven), although we have not checked if they are free-to-use yet.
 We have access to audio files to create a more interactive experience.
-Already have footsteps added into the first person POV plugin.
-We have access to basic audio software (Audacity).
+* Already have footsteps added into the first person POV plugin.
+We have access to audio software (Audacity).
 
 ### What We Need:
 **Blender components:** we will need to make more environmental items to fill in the now-3D space.
